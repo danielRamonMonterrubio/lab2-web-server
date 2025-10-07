@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Error 404 - Página no encontrada</title>
+  <style>
+    body {
+      background: #f7f7f7;
+      color: #333;
+      font-family: Consolas, "Courier New", monospace;
+      padding: 40px;
+    }
+    .error-container {
+      max-width: 700px;
+      margin: auto;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-left: 5px solid #d9534f; /* rojo tipo error */
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+      padding: 30px 40px;
+    }
+    h1 {
+      margin-top: 0;
+      font-size: 36px;
+      color: #d9534f;
+    }
+    p {
+      margin: 8px 0;
+      font-size: 15px;
+    }
+    .tech-details {
+      margin-top: 20px;
+      padding: 15px;
+      background: #f9f9f9;
+      border: 1px solid #eee;
+      font-size: 14px;
+      color: #555;
+      overflow-x: auto;
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      color: #337ab7;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="error-container">
+    <h1>HTTP 404 - Página no encontrada</h1>
+    <p>La página solicitada no existe o ha sido movida.</p>
+    <div class="tech-details">
+      <strong>Detalles técnicos:</strong><br/>
+      Código de estado: 404 Not Found<br/>
+      Método: GET<br/>
+      Ruta solicitada: <span id="path"></span><br/>
+      Servidor: Spring Boot
+    </div>
+    <a href="/">← Volver al inicio</a>
+  </div>
+  <script>
+    // Rellena con la URL actual para dar sensación "real"
+    document.getElementById('path').textContent = window.location.pathname;
+  </script>
+</body>
+</html>

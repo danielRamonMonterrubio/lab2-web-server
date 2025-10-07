@@ -1,0 +1,14 @@
+package es.unizar.webeng.lab2
+
+import org.springframework.boot.web.servlet.error.ErrorController
+import org.springframework.stereotype.Controller
+import org.springframework.web.bind.annotation.RequestMapping
+
+@Controller
+class CustomErrorController : ErrorController {
+
+    @RequestMapping("/error")
+    fun handleError(): String {
+        return "error" // busca templates/error.html
+    }
+}
